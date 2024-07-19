@@ -1,0 +1,467 @@
+<html>
+
+<head>
+	<title>标志明码查询</title>
+
+
+	<style type="text/css">
+		BODY {
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			SCROLLBAR-FACE-COLOR: #d7d7d7;
+			SCROLLBAR-HIGHLIGHT-COLOR: #d7d7d7;
+			SCROLLBAR-SHADOW-COLOR: #d45426;
+			SCROLLBAR-3DLIGHT-COLOR: #d45426;
+			SCROLLBAR-ARROW-COLOR: #d45426;
+			SCROLLBAR-TRACK-COLOR: #d7d7d7;
+			SCROLLBAR-DARKSHADOW-COLOR: #9E80BC;
+			SCROLLBAR-BASE-COLOR: #664089;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			text-decoration: none;
+			color: #4e4e4e;
+		}
+
+		A:link {
+			font-family: Arial, Helvetica, sans-serif;
+			FONT-SIZE: 9pt;
+			COLOR: #58595b;
+			text-decoration: none;
+		}
+
+		A:visited {
+			font-family: Arial, Helvetica, sans-serif;
+			FONT-SIZE: 9pt;
+			COLOR: #58595b;
+			text-decoration: none;
+		}
+
+		A:hover {
+			font-family: Arial, Helvetica, sans-serif;
+			FONT-SIZE: 9pt;
+			COLOR: #ff0000;
+			TEXT-DECORATION: underline;
+		}
+
+		A:active {
+			font-family: Arial, Helvetica, sans-serif;
+			FONT-SIZE: 9pt;
+			COLOR: #58595b;
+			text-decoration: none;
+		}
+
+		body {
+			background-color: #D7D7D7;
+		}
+
+		.Inquiry {
+			width: 96%;
+			margin-right: 2%;
+			margin-left: 2%;
+			border: 1px solid #929292;
+		}
+
+		.hover {
+			font-size: 12px;
+			color: #000000;
+			background-color: #d8551e;
+			font-weight: bold;
+			height: 25px;
+		}
+
+		.bt {
+			display: flex;
+			width: 37px;
+			background-image: url(../images/bt.jpg);
+			background-repeat: no-repeat;
+			height: 22px;
+			background-color: transparent;
+			border-top-width: 0px;
+			border-right-width: 0px;
+			border-bottom-width: 0px;
+			border-left-width: 0px;
+			border-top-style: none;
+			border-right-style: none;
+			border-bottom-style: none;
+			border-left-style: none;
+			float: left;
+			margin-right: 5px;
+		}
+
+		.cpbt {
+			font-size: 14px;
+			font-weight: bold;
+			display: block;
+			float: left;
+			padding-top: 5px;
+			color: #000000;
+		}
+
+		.btwz {
+			display: block;
+			float: right;
+		}
+
+		.font {
+			font-size: 12px;
+			color: #666666;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.Inquiry1 {
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: #929292;
+			padding-left: 14px;
+			height: 30px;
+		}
+
+		.myform {
+			width: 98%;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 10px;
+		}
+
+		.nrzi {
+			font-size: 12px;
+			color: #000000;
+			height: 25px;
+		}
+
+		.wb {
+			font-size: 12px;
+			font-weight: bold;
+			color: #333333;
+		}
+
+		.Factory {
+			display: block;
+			margin-bottom: 10px;
+			float: left;
+			margin-right: 30px;
+		}
+
+		.Category {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.date {
+			display: block;
+			margin-bottom: 10px;
+			float: left;
+			margin-right: 30px;
+		}
+
+		.User {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.kuang {
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: #000000;
+			background-color: transparent;
+			background-image: none;
+			border-top-width: 0px;
+			border-right-width: 0px;
+			border-left-width: 0px;
+		}
+
+		.Factory1 {
+			width: 35%;
+		}
+
+		.Category1 {
+			width: 45%;
+		}
+
+		.date1 {
+			width: 15%;
+		}
+
+		.weizi {
+			color: #bf1d00;
+			padding-left: 36px;
+			font-size: 12px;
+		}
+
+		.User1 {
+			width: 44%;
+		}
+
+		.Tabulation {
+			width: 96%;
+			margin-right: 2%;
+			margin-left: 2%;
+			margin-top: 20px;
+		}
+
+		.Tabulation h1 {
+			font-size: 14px;
+			font-weight: bold;
+			color: #000000;
+			padding-left: 10px;
+			height: 22px;
+			margin-top: 10px;
+		}
+
+		.Unit1 {
+			width: 87%;
+		}
+
+		.cpzi {
+			font-size: 14px;
+			font-weight: bold;
+			color: #000000;
+			padding-left: 10px;
+			height: 22px;
+			padding-top: 7px;
+			padding-bottom: 3px;
+		}
+
+		.h2 {
+			font-size: 12px;
+			font-weight: bold;
+			color: #464646;
+			height: 35px;
+		}
+
+		.jxs {
+			clear: both;
+			display: block;
+		}
+
+		.jxs1 {
+			width: 85%;
+		}
+
+		.riqi {
+			width: 20%;
+		}
+
+		h3 {
+			display: block;
+			font-size: 12px;
+			margin-left: 70%;
+		}
+
+		.form1 {
+			width: 200px;
+			font-size: 12px;
+			color: #000000;
+			margin-top: 10px;
+			float: right;
+			margin-right: 5%;
+			margin-bottom: 48px;
+		}
+
+		.page {
+			background-color: transparent;
+			border: 1px solid #999999;
+		}
+	</style>
+
+</head>
+
+<body onload="loadPage()">
+	<!-- form1  开始 -->
+	<form name="form1">
+		<br>
+		<input type="hidden" name="isFirst" value="isNotFirst">
+		<input type="hidden" name="start" value="0">
+		<input type="hidden" name="ipAddress" id="ipAddress" value="10.119.112.228">
+		<input type="hidden" name="curPageNum" value="null">
+		<input type="hidden" name="queryValue" value="null">
+		<br>
+		<!-- 查询表格  开始 -->
+		<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
+
+		<div class="Inquiry" style="height: 85px;display:none;">
+			<img src="./images/LxxxImg.gif" width=100% style="height: 85px;vertical-align: middle;" />
+		</div>
+		<table class="Inquiry" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="Inquiry1">
+					<h1 class="cpbt">标志明码查询</h1>
+					<label class="btwz">
+						<input type="button" name="queryData2" id="button" value="查询" onClick="queryData()"
+							style="cursor:hand;">
+						<input type="button" name="button" id="button" value="重置" onClick="clearForm()"
+							style="cursor:hand;">
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center" valign="top">
+
+					<table class="wb" width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="font_color pad_left" width="50%" height="30" valign="middle" style="#000000"
+								nowrap>&nbsp;&nbsp;&nbsp;&nbsp;标志明码：
+								<input type="hidden" name="recordFactoryId" value="">
+								<input class="kuang" title="" maxlength="25" align="top" style="width:60%"
+									name="lableCode" value="60979AA43943AA">
+							</td>
+							<td class="font_color pad_left" valign="middle" nowrap>
+								<input type="hidden" name="recordFactoryId" value="">
+								&nbsp;&nbsp;&nbsp;&nbsp;查询次数：<input class="kuang" title="" maxlength="5" align="top"
+									style="width:5%" name="queryCount" readonly="readonly" value="30"/>
+								<input type="hidden" name="recordFactoryId" value="">
+								&nbsp;&nbsp;&nbsp;&nbsp;上次查询IP地址：<input class="kuang" title="" maxlength="25"
+									align="top" style="width:35%" name="ipAddr" readonly="readonly"
+									value="10.119.112.228" />
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+		<!-- 查询表格  结束 -->
+
+
+		<!--产品流向信息查询结果  开始-->
+
+		<table width="96%" border="1" cellpadding="0" cellspacing="0" bordercolor="#929292" class="Tabulation"
+			style="border-collapse:collapse;">
+			<tr class="h2">
+				<td class="pad_left" valign="middle" style="color:#900" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;产品生产信息</td>
+				<td colspan="3">
+
+
+
+				</td>
+			</tr>
+			<tr class="h2">
+				<td class="pad_left" valign="middle" style="#000000" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;生产厂家&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='陕西中奥伯盾实业有限公司' readonly>
+				</td>
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;产品档案号&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='14279EC2A962552AE063D470770A74EC'
+						readonly>
+				</td>
+			</tr>
+			<tr class="h2">
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;产品名称&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%"
+						value='建筑耐火构件产品->防火门->钢质隔热防火门->GFM-1227-dk5 A1.50（甲级）-1' readonly>
+				</td>
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;规格型号&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='GFM-1227-dk5 A1.50（甲级）-1' readonly>
+				</td>
+			</tr>
+			<tr class="h2">
+
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;流向地区&nbsp;</td>
+				<td width="40%" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='陕西省->延安市->子长县' readonly>
+				</td>
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;流向单位&nbsp;</td>
+				<td width="40%" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='延安市禾草沟煤业有限公司' readonly>
+				</td>
+			</tr>
+
+			<tr class="h2">
+				<!--  
+		    <td class=" td_title"  nowrap>&nbsp;产品标签ID&nbsp;</td>
+			<td width="30%" align="left" class="td_data">
+				<input type="text" class="kuang" style="width:80%" value='00L15J00302F02D00L15J00200600F' readonly>
+			</td>	
+		  -->
+
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;表单类型&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='1001' readonly>
+				</td>
+
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;产品批号&nbsp;</td>
+				<td width="40%" align="left" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='' readonly>
+				</td>
+			</tr>
+			<tr class="h2">
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;生产时间&nbsp;</td>
+				<td width="40%" align="left" class="pad_left" style="col" colspan="3">
+					<input type="text" class="kuang" style="width:80%" value='2024-03-21 16:08:52' readonly>
+				</td>
+				<!-- 2019年9月17日 注释掉
+			 <td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;合同号&nbsp;</td>			
+			<td width="40%" colspan="3" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>
+			 -->
+			</tr>
+			<tr class="h2">
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+					&nbsp;&nbsp;&nbsp;&nbsp;质检员&nbsp;
+				</td>
+				<td width="40%" class="pad_left">
+					<input type="text" class="kuang" style="width:80%" value='' readonly>
+				</td>
+				<td class="font_color pad_left" valign="middle" style="#000000" nowrap></td>
+				<td width="40%" class="pad_left">
+
+				</td>
+			</tr>
+
+			<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="bottom" class="pad_left" style="color:#F00"><a href="#"
+							onclick="openHistory('60979AA43943AA')" type="button">历史查询记录</a></td>
+
+				</tr>
+			</table>
+		</table>
+
+
+
+		<br>
+
+
+
+		<!-- add2017-7-21 18:17:58 -->
+
+		<!-- end -->
+		<br>
+
+		<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<!-- <td valign="bottom" class="pad_left" style="color:#F00"><a href="#" onclick="connectCertificate2('%C9%C2%CE%F7%D6%D0%B0%C2%B2%AE%B6%DC%CA%B5%D2%B5%D3%D0%CF%DE%B9%AB%CB%BE','GFM-1227-dk5+A1.50%A3%A8%BC%D7%BC%B6%A3%A9-1','Z2023081806002481')">证书及检验报告</a></td>-->
+				<td valign="bottom" class="pad_left" style="color:#F00"><a href="#"
+						onclick="connectCertificate()">产品证书等信息请在中国消防产品信息网（www.cccf.com.cn）查询</a></td>
+			</tr>
+			<tr>
+				<td style='color: red;padding: 15px;'>
+					保密提醒：请严格按照国家法律法规要求使用信息系统，
+					严禁在系统中传输、存储或发布任何涉密信息或敏感信息，违者追究相关法律责任。
+				</td>
+			</tr>
+		</table>
+		<!--产品流向信息查询结果  结束 -->
+
+		<!-- 表的尾 开始-->
+		<!-- 表的尾 结束-->
+
+	</form>
+</body>
+
+</html>
